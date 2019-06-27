@@ -1,0 +1,56 @@
+dist: trusty
+sudo: false
+language: php
+
+php:
+  - 7.3
+  - 7.4snapshot
+  - nightly
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+before_install:
+  - mv ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini{,.disabled} || echo "xdebug not available"
+  - composer self-update
+
+install: travis_retry composer install
+
+script:
+  - ./vendor/bin/phpunit
+
+jobs:
+  allow_failures:
+    - php: 7.4snapshot
+    - php: nightly
+
+  include:
+    - stage: Code Quality
+      env: TEST_COVERAGE=1
+      before_script:
+        - mv ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini{.disabled,}
+        - if [[ ! $(php -m | grep -si xdebug) ]]; then echo "xdebug required for coverage"; exit 1; fi
+      script:
+        - ./vendor/bin/phpunit --coverage-clover ./clover.xml
+      after_script:
+        - wget https://scrutinizer-ci.com/ocular.phar
+        - php ocular.phar code-coverage:upload --format=php-clover ./clover.xml
+
+    - stage: Code Quality
+      env: CODE_STANDARD=1
+      script:
+        - ./vendor/bin/phpcs
+
+    - stage: Code Quality
+      env: STATIC_ANALYSIS=1
+      script:
+        - ./vendor/bin/phpstan analyse
+
+    - stage: Code Quality
+      env: MUTATION_TESTS=1
+      before_script:
+        - mv ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini{.disabled,}
+        - if [[ ! $(php -m | grep -si xdebug) ]]; then echo "xdebug required for mutation tests"; exit 1; fi
+      script:
+        - ./vendor/bin/infection --threads=$(nproc) --min-msi=100 --min-covered-msi=100

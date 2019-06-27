@@ -22,8 +22,8 @@ flexibility to solve this problem.
 
 ## Installation
 
-This package is available on [Packagist](http://packagist.org/packages/lcobucci/error-handling-middleware),
-and we recommend you to install it using [Composer](http://getcomposer.org):
+This package is available on [Packagist](https://packagist.org/packages/lcobucci/error-handling-middleware),
+and we recommend you to install it using [Composer](https://getcomposer.org):
 
 ```shell
 composer require lcobucci/error-handling-middleware

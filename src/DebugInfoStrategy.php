@@ -5,6 +5,9 @@ namespace Lcobucci\ErrorHandling;
 
 use Throwable;
 
+/**
+ * Defines how the debug information should be extracted from an error/exception
+ */
 interface DebugInfoStrategy
 {
     /**

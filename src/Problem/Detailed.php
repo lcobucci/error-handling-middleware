@@ -5,6 +5,11 @@ namespace Lcobucci\ErrorHandling\Problem;
 
 use Throwable;
 
+/**
+ * Provides extension members to the problem details
+ *
+ * @see https://tools.ietf.org/html/rfc7807#section-3.2
+ */
 interface Detailed extends Throwable
 {
     /**

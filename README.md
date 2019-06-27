@@ -5,7 +5,7 @@
 [![Unstable Version](https://img.shields.io/packagist/vpre/lcobucci/error-handling-middleware.svg?style=flat-square)](https://packagist.org/packages/lcobucci/error-handling-middleware)
 
 ![Branch master](https://img.shields.io/badge/branch-master-brightgreen.svg?style=flat-square)
-[![Build Status](https://img.shields.io/travis/lcobucci/error-handling-middleware/master.svg?style=flat-square)](http://travis-ci.org/#!/lcobucci/error-handling-middleware)
+[![Build Status](https://img.shields.io/travis/lcobucci/error-handling-middleware/master.svg?style=flat-square)](http://travis-ci.org/lcobucci/error-handling-middleware)
 [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/lcobucci/error-handling-middleware/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/lcobucci/error-handling-middleware/?branch=master)
 [![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/lcobucci/error-handling-middleware/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/lcobucci/error-handling-middleware/?branch=master)
 

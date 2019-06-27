@@ -1,0 +1,52 @@
+{
+    "name": "lcobucci/error-handling-middleware",
+    "description": "A PSR-15 middleware compatible with RFC 7807",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luís Cobucci",
+            "email": "lcobucci@gmail.com"
+        }
+    ],
+    "keywords": ["PSR-15", "RFC-7807", "error handling"],
+    "require": {
+        "php": "^7.3",
+        "ext-json": "^1.7",
+        "fig/http-message-util": "^1.1",
+        "lcobucci/content-negotiation-middleware": "^2.0",
+        "psr/http-factory": "^1.0",
+        "psr/http-server-middleware": "^1.0",
+        "psr/log": "^1.1"
+    },
+    "require-dev": {
+        "infection/infection": "^0.13",
+        "lcobucci/coding-standard": "^3.0",
+        "phpstan/phpstan": "^0.11",
+        "phpstan/phpstan-deprecation-rules": "^0.11",
+        "phpstan/phpstan-phpunit": "^0.11",
+        "phpstan/phpstan-strict-rules": "^0.11",
+        "phpunit/phpunit": "^8.2",
+        "squizlabs/php_codesniffer": "^3.4",
+        "zendframework/zend-diactoros": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lcobucci\\ErrorHandling\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lcobucci\\ErrorHandling\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    }
+}

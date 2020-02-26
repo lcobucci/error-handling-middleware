@@ -51,7 +51,7 @@ use Lcobucci\ContentNegotiation\ContentTypeMiddleware;
 use Lcobucci\ErrorHandling\ErrorConversionMiddleware;
 use Lcobucci\ErrorHandling\ErrorLoggingMiddleware;
 
-// In a Zend Expressive application, it would look like this:
+// In a Laminas Mezzio application, it would look like this:
 $application->pipe(ContentTypeMiddleware::fromRecommendedSettings( /* ... */ )); // Very first middleware
 $application->pipe(new ErrorConversionMiddleware( /* ... */ ));
 $application->pipe(new ErrorLoggingMiddleware( /* ... */ ));

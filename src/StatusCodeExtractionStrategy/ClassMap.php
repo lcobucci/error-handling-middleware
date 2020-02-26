@@ -24,7 +24,7 @@ final class ClassMap implements StatusCodeExtractionStrategy
     /**
      * @var array<string, int>
      */
-    private $conversionMap;
+    private array $conversionMap;
 
     /**
      * @param array<string, int> $conversionMap
@@ -42,6 +42,8 @@ final class ClassMap implements StatusCodeExtractionStrategy
             }
         }
 
-        return $error->getCode() ?: StatusCodeInterface::STATUS_INTERNAL_SERVER_ERROR;
+        $code = $error->getCode();
+
+        return $code !== 0 ? $code : StatusCodeInterface::STATUS_INTERNAL_SERVER_ERROR;
     }
 }

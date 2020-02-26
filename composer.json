@@ -11,24 +11,25 @@
     ],
     "keywords": ["PSR-15", "RFC-7807", "error handling"],
     "require": {
-        "php": "^7.3",
-        "ext-json": "^1.7",
+        "php": "^7.4 || ^8.0",
+        "ext-json": "*",
         "fig/http-message-util": "^1.1",
-        "lcobucci/content-negotiation-middleware": "^2.0",
+        "lcobucci/content-negotiation-middleware": "^2.2",
         "psr/http-factory": "^1.0",
         "psr/http-server-middleware": "^1.0",
         "psr/log": "^1.1"
     },
     "require-dev": {
-        "infection/infection": "^0.13",
-        "lcobucci/coding-standard": "^3.0",
-        "phpstan/phpstan": "^0.11",
-        "phpstan/phpstan-deprecation-rules": "^0.11",
-        "phpstan/phpstan-phpunit": "^0.11",
-        "phpstan/phpstan-strict-rules": "^0.11",
-        "phpunit/phpunit": "^8.2",
-        "squizlabs/php_codesniffer": "^3.4",
-        "zendframework/zend-diactoros": "^2.0"
+        "infection/infection": "^0.15",
+        "laminas/laminas-diactoros": "^2.2",
+        "lcobucci/coding-standard": "^4.0",
+        "phpstan/extension-installer": "^1.0",
+        "phpstan/phpstan": "^0.12",
+        "phpstan/phpstan-deprecation-rules": "^0.12",
+        "phpstan/phpstan-phpunit": "^0.12",
+        "phpstan/phpstan-strict-rules": "^0.12",
+        "phpunit/phpunit": "^9.0",
+        "squizlabs/php_codesniffer": "^3.5"
     },
     "autoload": {
         "psr-4": {

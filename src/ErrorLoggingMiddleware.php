@@ -12,10 +12,7 @@ use Throwable;
 
 final class ErrorLoggingMiddleware implements MiddlewareInterface
 {
-    /**
-     * @var LoggerInterface
-     */
-    private $logger;
+    private LoggerInterface $logger;
 
     public function __construct(LoggerInterface $logger)
     {

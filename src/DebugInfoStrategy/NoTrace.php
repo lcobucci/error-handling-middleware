@@ -26,6 +26,9 @@ final class NoTrace implements DebugInfoStrategy
         return $debugInfo;
     }
 
+    /**
+     * @return Generator<array<string, string|int>>
+     */
     private function streamStack(?Throwable $previous): Generator
     {
         if ($previous === null) {

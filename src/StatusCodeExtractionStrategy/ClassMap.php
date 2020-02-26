@@ -42,6 +42,8 @@ final class ClassMap implements StatusCodeExtractionStrategy
             }
         }
 
-        return $error->getCode() ?: StatusCodeInterface::STATUS_INTERNAL_SERVER_ERROR;
+        $code = $error->getCode();
+
+        return $code !== 0 ? $code : StatusCodeInterface::STATUS_INTERNAL_SERVER_ERROR;
     }
 }

@@ -94,7 +94,7 @@ final class ErrorConversionMiddlewareTest extends TestCase
     }
 
     /**
-     * @return array<string, array<Throwable|array<string, mixed>>>
+     * @return array<string, array<Throwable|int|array<string, mixed>>>
      */
     public function possibleConversions(): iterable
     {

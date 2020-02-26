@@ -3,14 +3,14 @@ declare(strict_types=1);
 
 namespace Lcobucci\ErrorHandling\Tests;
 
+use Laminas\Diactoros\Response;
+use Laminas\Diactoros\ServerRequest;
 use Lcobucci\ErrorHandling\ErrorLoggingMiddleware;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Server\RequestHandlerInterface;
 use Psr\Log\LoggerInterface;
 use RuntimeException;
-use Zend\Diactoros\Response;
-use Zend\Diactoros\ServerRequest;
 
 /**
  * @coversDefaultClass \Lcobucci\ErrorHandling\ErrorLoggingMiddleware

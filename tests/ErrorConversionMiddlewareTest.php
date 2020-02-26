@@ -4,6 +4,9 @@ declare(strict_types=1);
 namespace Lcobucci\ErrorHandling\Tests;
 
 use Fig\Http\Message\StatusCodeInterface;
+use Laminas\Diactoros\Response;
+use Laminas\Diactoros\ResponseFactory;
+use Laminas\Diactoros\ServerRequest;
 use Lcobucci\ContentNegotiation\UnformattedResponse;
 use Lcobucci\ErrorHandling\DebugInfoStrategy;
 use Lcobucci\ErrorHandling\DebugInfoStrategy\NoDebugInfo;
@@ -16,9 +19,6 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use RuntimeException;
 use Throwable;
-use Zend\Diactoros\Response;
-use Zend\Diactoros\ResponseFactory;
-use Zend\Diactoros\ServerRequest;
 
 /**
  * @coversDefaultClass \Lcobucci\ErrorHandling\ErrorConversionMiddleware

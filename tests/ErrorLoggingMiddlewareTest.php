@@ -20,7 +20,7 @@ final class ErrorLoggingMiddlewareTest extends TestCase
     /**
      * @var LoggerInterface&MockObject
      */
-    private $logger;
+    private LoggerInterface $logger;
 
     /**
      * @before

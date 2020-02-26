@@ -29,15 +29,8 @@ use Throwable;
  */
 final class ErrorConversionMiddlewareTest extends TestCase
 {
-    /**
-     * @var ResponseFactory
-     */
-    private $responseFactory;
-
-    /**
-     * @var ClassMap
-     */
-    private $statusCodeExtractor;
+    private ResponseFactory $responseFactory;
+    private ClassMap $statusCodeExtractor;
 
     /**
      * @before

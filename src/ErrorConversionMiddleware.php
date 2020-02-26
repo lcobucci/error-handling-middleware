@@ -24,20 +24,9 @@ final class ErrorConversionMiddleware implements MiddlewareInterface
 
     private const STATUS_URL = 'https://httpstatuses.com/';
 
-    /**
-     * @var ResponseFactoryInterface
-     */
-    private $responseFactory;
-
-    /**
-     * @var DebugInfoStrategy
-     */
-    private $debugInfoStrategy;
-
-    /**
-     * @var StatusCodeExtractionStrategy
-     */
-    private $statusCodeExtractor;
+    private ResponseFactoryInterface $responseFactory;
+    private DebugInfoStrategy $debugInfoStrategy;
+    private StatusCodeExtractionStrategy $statusCodeExtractor;
 
     public function __construct(
         ResponseFactoryInterface $responseFactory,

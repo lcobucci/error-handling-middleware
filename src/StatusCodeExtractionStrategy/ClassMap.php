@@ -24,7 +24,7 @@ final class ClassMap implements StatusCodeExtractionStrategy
     /**
      * @var array<string, int>
      */
-    private $conversionMap;
+    private array $conversionMap;
 
     /**
      * @param array<string, int> $conversionMap

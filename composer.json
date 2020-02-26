@@ -12,7 +12,7 @@
     "keywords": ["PSR-15", "RFC-7807", "error handling"],
     "require": {
         "php": "^7.4 || ^8.0",
-        "ext-json": "^1.7",
+        "ext-json": "*",
         "fig/http-message-util": "^1.1",
         "lcobucci/content-negotiation-middleware": "^2.0",
         "psr/http-factory": "^1.0",

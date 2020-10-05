@@ -9,9 +9,7 @@ use LogicException;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
 
-/**
- * @coversDefaultClass \Lcobucci\ErrorHandling\DebugInfoStrategy\NoTrace
- */
+/** @coversDefaultClass \Lcobucci\ErrorHandling\DebugInfoStrategy\NoTrace */
 final class NoTraceTest extends TestCase
 {
     /**

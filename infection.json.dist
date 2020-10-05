@@ -5,5 +5,7 @@
     },
     "logs": {
         "text": "infection.log"
-    }
+    },
+    "minMsi": 100,
+    "minCoveredMsi": 100
 }

@@ -6,14 +6,13 @@ namespace Lcobucci\ErrorHandling\DebugInfoStrategy;
 use Generator;
 use Lcobucci\ErrorHandling\DebugInfoStrategy;
 use Throwable;
+
 use function get_class;
 use function iterator_to_array;
 
 final class NoTrace implements DebugInfoStrategy
 {
-    /**
-     * {@inheritDoc}
-     */
+    /** @inheritDoc */
     public function extractDebugInfo(Throwable $error): ?array
     {
         $debugInfo = $this->format($error);
@@ -26,9 +25,7 @@ final class NoTrace implements DebugInfoStrategy
         return $debugInfo;
     }
 
-    /**
-     * @return Generator<array<string, string|int>>
-     */
+    /** @return Generator<array<string, string|int>> */
     private function streamStack(?Throwable $previous): Generator
     {
         if ($previous === null) {
@@ -39,9 +36,7 @@ final class NoTrace implements DebugInfoStrategy
         yield from $this->streamStack($previous->getPrevious());
     }
 
-    /**
-     * @return array<string, string|int>
-     */
+    /** @return array<string, string|int> */
     private function format(Throwable $error): array
     {
         return [

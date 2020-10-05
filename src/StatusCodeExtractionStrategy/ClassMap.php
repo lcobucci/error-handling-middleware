@@ -21,14 +21,10 @@ final class ClassMap implements StatusCodeExtractionStrategy
         Problem\ServiceUnavailable::class => StatusCodeInterface::STATUS_SERVICE_UNAVAILABLE,
     ];
 
-    /**
-     * @var array<string, int>
-     */
+    /** @var array<string, int> */
     private array $conversionMap;
 
-    /**
-     * @param array<string, int> $conversionMap
-     */
+    /** @param array<string, int> $conversionMap */
     public function __construct(array $conversionMap = self::DEFAULT_MAP)
     {
         $this->conversionMap = $conversionMap;

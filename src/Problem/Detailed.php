@@ -12,8 +12,6 @@ use Throwable;
  */
 interface Detailed extends Throwable
 {
-    /**
-     * @return array<string, mixed>
-     */
+    /** @return array<string, mixed> */
     public function getExtraDetails(): array;
 }

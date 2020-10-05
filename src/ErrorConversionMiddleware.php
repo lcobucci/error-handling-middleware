@@ -13,6 +13,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Throwable;
+
 use function array_key_exists;
 
 final class ErrorConversionMiddleware implements MiddlewareInterface
@@ -69,9 +70,7 @@ final class ErrorConversionMiddleware implements MiddlewareInterface
         );
     }
 
-    /**
-     * @return array<string, mixed>
-     */
+    /** @return array<string, mixed> */
     private function extractData(Throwable $error, ResponseInterface $response): array
     {
         $data = [

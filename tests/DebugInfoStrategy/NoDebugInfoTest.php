@@ -7,9 +7,7 @@ use Lcobucci\ErrorHandling\DebugInfoStrategy\NoDebugInfo;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
 
-/**
- * @coversDefaultClass \Lcobucci\ErrorHandling\DebugInfoStrategy\NoDebugInfo
- */
+/** @coversDefaultClass \Lcobucci\ErrorHandling\DebugInfoStrategy\NoDebugInfo */
 final class NoDebugInfoTest extends TestCase
 {
     /**

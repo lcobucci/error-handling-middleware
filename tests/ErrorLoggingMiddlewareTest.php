@@ -12,19 +12,13 @@ use Psr\Http\Server\RequestHandlerInterface;
 use Psr\Log\LoggerInterface;
 use RuntimeException;
 
-/**
- * @coversDefaultClass \Lcobucci\ErrorHandling\ErrorLoggingMiddleware
- */
+/** @coversDefaultClass \Lcobucci\ErrorHandling\ErrorLoggingMiddleware */
 final class ErrorLoggingMiddlewareTest extends TestCase
 {
-    /**
-     * @var LoggerInterface&MockObject
-     */
+    /** @var LoggerInterface&MockObject */
     private LoggerInterface $logger;
 
-    /**
-     * @before
-     */
+    /** @before */
     public function createLogger(): void
     {
         $this->logger = $this->createMock(LoggerInterface::class);

@@ -1,5 +1,4 @@
 /vendor/
-/composer.lock
 /.phpcs.cache
 /infection.log
 /.phpunit.result.cache

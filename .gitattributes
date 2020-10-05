@@ -10,3 +10,4 @@
 /phpunit.xml.dist    export-ignore
 /README.md           export-ignore
 /Makefile            export-ignore
+/composer.lock       export-ignore

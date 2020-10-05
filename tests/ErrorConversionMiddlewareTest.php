@@ -32,9 +32,7 @@ final class ErrorConversionMiddlewareTest extends TestCase
     private ResponseFactory $responseFactory;
     private ClassMap $statusCodeExtractor;
 
-    /**
-     * @before
-     */
+    /** @before */
     public function createDependencies(): void
     {
         $this->responseFactory     = new ResponseFactory();
@@ -86,9 +84,7 @@ final class ErrorConversionMiddlewareTest extends TestCase
         self::assertSame($expectedData, $response->getUnformattedContent());
     }
 
-    /**
-     * @return array<string, array<Throwable|int|array<string, mixed>>>
-     */
+    /** @return array<string, array<Throwable|int|array<string, mixed>>> */
     public function possibleConversions(): iterable
     {
         yield 'no customisation' => [

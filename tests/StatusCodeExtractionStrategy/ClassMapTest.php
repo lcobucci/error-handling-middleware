@@ -10,9 +10,7 @@ use PHPUnit\Framework\TestCase;
 use RuntimeException;
 use Throwable;
 
-/**
- * @coversDefaultClass \Lcobucci\ErrorHandling\StatusCodeExtractionStrategy\ClassMap
- */
+/** @coversDefaultClass \Lcobucci\ErrorHandling\StatusCodeExtractionStrategy\ClassMap */
 final class ClassMapTest extends TestCase
 {
     /**
@@ -79,9 +77,7 @@ final class ClassMapTest extends TestCase
         self::assertSame($expected, $extractor->extractStatusCode($error));
     }
 
-    /**
-     * @return array<string, array<Throwable|int>>
-     */
+    /** @return array<string, array<Throwable|int>> */
     public function defaultConversions(): iterable
     {
         yield Problem\InvalidRequest::class => [

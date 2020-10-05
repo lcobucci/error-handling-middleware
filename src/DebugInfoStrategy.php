@@ -10,8 +10,6 @@ use Throwable;
  */
 interface DebugInfoStrategy
 {
-    /**
-     * @return array<string, mixed>|null
-     */
+    /** @return array<string, mixed>|null */
     public function extractDebugInfo(Throwable $error): ?array;
 }

@@ -1,13 +1,11 @@
 # Error handling middleware
 
-[![Total Downloads](https://img.shields.io/packagist/dt/lcobucci/error-handling-middleware.svg?style=flat-square)](https://packagist.org/packages/lcobucci/error-handling-middleware)
-[![Latest Stable Version](https://img.shields.io/packagist/v/lcobucci/error-handling-middleware.svg?style=flat-square)](https://packagist.org/packages/lcobucci/error-handling-middleware)
-[![Unstable Version](https://img.shields.io/packagist/vpre/lcobucci/error-handling-middleware.svg?style=flat-square)](https://packagist.org/packages/lcobucci/error-handling-middleware)
+[![Total Downloads]](https://packagist.org/packages/lcobucci/error-handling-middleware)
+[![Latest Stable Version]](https://packagist.org/packages/lcobucci/error-handling-middleware)
+[![Unstable Version]](https://packagist.org/packages/lcobucci/error-handling-middleware)
 
-![Branch master](https://img.shields.io/badge/branch-master-brightgreen.svg?style=flat-square)
-[![Build Status](https://img.shields.io/travis/lcobucci/error-handling-middleware/master.svg?style=flat-square)](http://travis-ci.org/lcobucci/error-handling-middleware)
-[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/lcobucci/error-handling-middleware/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/lcobucci/error-handling-middleware/?branch=master)
-[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/lcobucci/error-handling-middleware/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/lcobucci/error-handling-middleware/?branch=master)
+[![Build Status]](https://github.com/lcobucci/error-handling-middleware/actions?query=workflow%3A%22PHPUnit%20Tests%22+branch%3A1.2.x)
+[![Code Coverage]](https://codecov.io/gh/lcobucci/error-handling-middleware)
 
 ## Motivation
 
@@ -22,8 +20,7 @@ flexibility to solve this problem.
 
 ## Installation
 
-This package is available on [Packagist](https://packagist.org/packages/lcobucci/error-handling-middleware),
-and we recommend you to install it using [Composer](https://getcomposer.org):
+This package is available on [Packagist], and we recommend you to install it using [Composer]:
 
 ```shell
 composer require lcobucci/error-handling-middleware
@@ -190,9 +187,7 @@ final class InsufficientCredit extends RuntimeException implements Forbidden, Ty
         return 'You do not have enough credit.';
     }
 
-    /**
-     * {@inheritDoc}
-     */
+    /** @inheritDoc */
     public function getExtraDetails(): array
     {
         return ['balance' => $this->currentBalance]; // you might add "instance" and "accounts" too :)
@@ -202,5 +197,14 @@ final class InsufficientCredit extends RuntimeException implements Forbidden, Ty
 
 ## License
 
-MIT, see [LICENSE file](LICENSE).
+MIT, see [LICENSE].
+
+[Total Downloads]: https://img.shields.io/packagist/dt/lcobucci/error-handling-middleware.svg?style=flat-square
+[Latest Stable Version]: https://img.shields.io/packagist/v/lcobucci/error-handling-middleware.svg?style=flat-square
+[Unstable Version]: https://img.shields.io/packagist/vpre/lcobucci/error-handling-middleware.svg?style=flat-square
+[Build Status]: https://img.shields.io/github/workflow/status/lcobucci/error-handling-middleware/PHPUnit%20tests/1.2.x?style=flat-square
+[Code Coverage]: https://codecov.io/gh/lcobucci/error-handling-middleware/branch/1.2.x/graph/badge.svg
+[Packagist]: http://packagist.org/packages/lcobucci/error-handling-middleware
+[Composer]: http://getcomposer.org
+[LICENSE]: LICENSE
 

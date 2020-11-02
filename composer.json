@@ -20,7 +20,7 @@
         "psr/log": "^1.1"
     },
     "require-dev": {
-        "infection/infection": "^0.19",
+        "infection/infection": "^0.20",
         "laminas/laminas-diactoros": "^2.4",
         "lcobucci/coding-standard": "^6.0",
         "phpstan/extension-installer": "^1.0",

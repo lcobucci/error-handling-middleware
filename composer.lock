@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3eddc195a6c3396988e46e0f0ddee6b3",
+    "content-hash": "d4c9220ed7f73ccd8d3c6e75d4d584e6",
     "packages": [
         {
             "name": "fig/http-message-util",
@@ -1675,16 +1675,16 @@
         },
         {
             "name": "phpstan/extension-installer",
-            "version": "1.0.6",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/extension-installer.git",
-                "reference": "5de413b3113304d81b4d895caa443fda2da25b54"
+                "reference": "66c7adc9dfa38b6b5838a9fb728b68a7d8348051"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/extension-installer/zipball/5de413b3113304d81b4d895caa443fda2da25b54",
-                "reference": "5de413b3113304d81b4d895caa443fda2da25b54",
+                "url": "https://api.github.com/repos/phpstan/extension-installer/zipball/66c7adc9dfa38b6b5838a9fb728b68a7d8348051",
+                "reference": "66c7adc9dfa38b6b5838a9fb728b68a7d8348051",
                 "shasum": ""
             },
             "require": {
@@ -1712,7 +1712,7 @@
                 "MIT"
             ],
             "description": "Composer plugin for automatic installation of PHPStan extensions",
-            "time": "2020-12-12T15:17:16+00:00"
+            "time": "2020-12-13T13:06:13+00:00"
         },
         {
             "name": "phpstan/phpdoc-parser",

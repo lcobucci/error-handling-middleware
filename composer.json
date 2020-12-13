@@ -23,7 +23,7 @@
         "infection/infection": "^0.20",
         "laminas/laminas-diactoros": "^2.5",
         "lcobucci/coding-standard": "^6.0",
-        "phpstan/extension-installer": "^1.0",
+        "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan": "^0.12",
         "phpstan/phpstan-deprecation-rules": "^0.12",
         "phpstan/phpstan-phpunit": "^0.12",

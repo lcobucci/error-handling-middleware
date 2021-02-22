@@ -4,7 +4,7 @@
 [![Latest Stable Version]](https://packagist.org/packages/lcobucci/error-handling-middleware)
 [![Unstable Version]](https://packagist.org/packages/lcobucci/error-handling-middleware)
 
-[![Build Status]](https://github.com/lcobucci/error-handling-middleware/actions?query=workflow%3A%22PHPUnit%20Tests%22+branch%3A1.2.x)
+[![Build Status]](https://github.com/lcobucci/error-handling-middleware/actions?query=workflow%3A%22PHPUnit%20Tests%22+branch%3A1.3.x)
 [![Code Coverage]](https://codecov.io/gh/lcobucci/error-handling-middleware)
 
 ## Motivation
@@ -202,8 +202,8 @@ MIT, see [LICENSE].
 [Total Downloads]: https://img.shields.io/packagist/dt/lcobucci/error-handling-middleware.svg?style=flat-square
 [Latest Stable Version]: https://img.shields.io/packagist/v/lcobucci/error-handling-middleware.svg?style=flat-square
 [Unstable Version]: https://img.shields.io/packagist/vpre/lcobucci/error-handling-middleware.svg?style=flat-square
-[Build Status]: https://img.shields.io/github/workflow/status/lcobucci/error-handling-middleware/PHPUnit%20tests/1.2.x?style=flat-square
-[Code Coverage]: https://codecov.io/gh/lcobucci/error-handling-middleware/branch/1.2.x/graph/badge.svg
+[Build Status]: https://img.shields.io/github/workflow/status/lcobucci/error-handling-middleware/PHPUnit%20tests/1.3.x?style=flat-square
+[Code Coverage]: https://codecov.io/gh/lcobucci/error-handling-middleware/branch/1.3.x/graph/badge.svg
 [Packagist]: http://packagist.org/packages/lcobucci/error-handling-middleware
 [Composer]: http://getcomposer.org
 [LICENSE]: LICENSE

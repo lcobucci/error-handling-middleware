@@ -15,7 +15,7 @@
         }
     ],
     "require": {
-        "php": "^7.4 || ^8.0",
+        "php": "^8.0",
         "ext-json": "*",
         "fig/http-message-util": "^1.1",
         "lcobucci/content-negotiation-middleware": "^3.0",

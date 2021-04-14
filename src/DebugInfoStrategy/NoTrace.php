@@ -7,7 +7,6 @@ use Generator;
 use Lcobucci\ErrorHandling\DebugInfoStrategy;
 use Throwable;
 
-use function get_class;
 use function iterator_to_array;
 
 final class NoTrace implements DebugInfoStrategy
@@ -40,7 +39,7 @@ final class NoTrace implements DebugInfoStrategy
     private function format(Throwable $error): array
     {
         return [
-            'class'   => get_class($error),
+            'class'   => $error::class,
             'code'    => $error->getCode(),
             'message' => $error->getMessage(),
             'file'    => $error->getFile(),

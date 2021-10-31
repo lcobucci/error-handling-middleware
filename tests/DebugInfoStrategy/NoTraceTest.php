@@ -31,7 +31,7 @@ final class NoTraceTest extends TestCase
                 'file'    => __FILE__,
                 'line'    => __LINE__ + 2,
             ],
-            $strategy->extractDebugInfo(new RuntimeException('Testing', 11))
+            $strategy->extractDebugInfo(new RuntimeException('Testing', 11)),
         );
     }
 
@@ -77,10 +77,10 @@ final class NoTraceTest extends TestCase
                     new InvalidArgumentException(
                         'Oh no!',
                         25,
-                        new LogicException('Bummer')
-                    )
-                )
-            )
+                        new LogicException('Bummer'),
+                    ),
+                ),
+            ),
         );
     }
 }

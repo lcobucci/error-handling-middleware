@@ -55,7 +55,7 @@ final class ErrorConversionMiddlewareTest extends TestCase
         $middleware = new ErrorConversionMiddleware(
             $this->responseFactory,
             new NoDebugInfo(),
-            $this->statusCodeExtractor
+            $this->statusCodeExtractor,
         );
 
         self::assertSame($response, $middleware->process(new ServerRequest(), $handler));
@@ -75,7 +75,7 @@ final class ErrorConversionMiddlewareTest extends TestCase
     public function processShouldConvertTheExceptionIntoAnUnformattedResponseWithTheProblemDetails(
         Throwable $error,
         int $expectedStatusCode,
-        array $expectedData
+        array $expectedData,
     ): void {
         $response = $this->handleProcessWithError(new ServerRequest(), $error);
 
@@ -100,7 +100,7 @@ final class ErrorConversionMiddlewareTest extends TestCase
         yield 'typed exceptions' => [
             new SampleProblem\Typed(
                 'Your current balance is 30, but that costs 50.',
-                StatusCodeInterface::STATUS_FORBIDDEN
+                StatusCodeInterface::STATUS_FORBIDDEN,
             ),
             StatusCodeInterface::STATUS_FORBIDDEN,
             [
@@ -113,7 +113,7 @@ final class ErrorConversionMiddlewareTest extends TestCase
         yield 'titled exceptions' => [
             new SampleProblem\Titled(
                 'Your current balance is 30, but that costs 50.',
-                StatusCodeInterface::STATUS_FORBIDDEN
+                StatusCodeInterface::STATUS_FORBIDDEN,
             ),
             StatusCodeInterface::STATUS_FORBIDDEN,
             [
@@ -126,7 +126,7 @@ final class ErrorConversionMiddlewareTest extends TestCase
         yield 'detailed exceptions' => [
             new SampleProblem\Detailed(
                 'Your current balance is 30, but that costs 50.',
-                StatusCodeInterface::STATUS_FORBIDDEN
+                StatusCodeInterface::STATUS_FORBIDDEN,
             ),
             StatusCodeInterface::STATUS_FORBIDDEN,
             [
@@ -141,7 +141,7 @@ final class ErrorConversionMiddlewareTest extends TestCase
         yield 'typed+titled+detailed exceptions' => [
             new SampleProblem\All(
                 'Your current balance is 30, but that costs 50.',
-                StatusCodeInterface::STATUS_FORBIDDEN
+                StatusCodeInterface::STATUS_FORBIDDEN,
             ),
             StatusCodeInterface::STATUS_FORBIDDEN,
             [
@@ -229,12 +229,12 @@ final class ErrorConversionMiddlewareTest extends TestCase
     private function handleProcessWithError(
         ServerRequestInterface $request,
         Throwable $error,
-        ?DebugInfoStrategy $debugInfoStrategy = null
+        ?DebugInfoStrategy $debugInfoStrategy = null,
     ): ResponseInterface {
         $middleware = new ErrorConversionMiddleware(
             $this->responseFactory,
             $debugInfoStrategy ?? new NoDebugInfo(),
-            $this->statusCodeExtractor
+            $this->statusCodeExtractor,
         );
 
         $handler = $this->createMock(RequestHandlerInterface::class);

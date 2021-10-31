@@ -25,7 +25,7 @@ final class ClassMapTest extends TestCase
 
         self::assertSame(
             StatusCodeInterface::STATUS_SERVICE_UNAVAILABLE,
-            $extractor->extractStatusCode(new RuntimeException())
+            $extractor->extractStatusCode(new RuntimeException()),
         );
     }
 
@@ -41,7 +41,7 @@ final class ClassMapTest extends TestCase
 
         self::assertSame(
             StatusCodeInterface::STATUS_SERVICE_UNAVAILABLE,
-            $extractor->extractStatusCode(new RuntimeException('', StatusCodeInterface::STATUS_SERVICE_UNAVAILABLE))
+            $extractor->extractStatusCode(new RuntimeException('', StatusCodeInterface::STATUS_SERVICE_UNAVAILABLE)),
         );
     }
 
@@ -57,7 +57,7 @@ final class ClassMapTest extends TestCase
 
         self::assertSame(
             StatusCodeInterface::STATUS_INTERNAL_SERVER_ERROR,
-            $extractor->extractStatusCode(new RuntimeException())
+            $extractor->extractStatusCode(new RuntimeException()),
         );
     }
 
@@ -70,7 +70,7 @@ final class ClassMapTest extends TestCase
      */
     public function extractStatusCodeShouldUseDefaultClassMapWhenNothingIsProvided(
         Throwable $error,
-        int $expected
+        int $expected,
     ): void {
         $extractor = new ClassMap();
 

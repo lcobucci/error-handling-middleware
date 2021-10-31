@@ -18,7 +18,7 @@
         "php": "^8.0",
         "ext-json": "*",
         "fig/http-message-util": "^1.1",
-        "lcobucci/content-negotiation-middleware": "^3.0",
+        "lcobucci/content-negotiation-middleware": "^3.1",
         "psr/http-factory": "^1.0",
         "psr/http-message": "^1.0",
         "psr/http-server-handler": "^1.0",
@@ -28,7 +28,7 @@
     "require-dev": {
         "infection/infection": "^0.25",
         "laminas/laminas-diactoros": "^2.8",
-        "lcobucci/coding-standard": "^7.0",
+        "lcobucci/coding-standard": "^8.0",
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan": "^0.12",
         "phpstan/phpstan-deprecation-rules": "^0.12",

@@ -25,18 +25,11 @@ final class ErrorConversionMiddleware implements MiddlewareInterface
 
     private const STATUS_URL = 'https://httpstatuses.com/';
 
-    private ResponseFactoryInterface $responseFactory;
-    private DebugInfoStrategy $debugInfoStrategy;
-    private StatusCodeExtractionStrategy $statusCodeExtractor;
-
     public function __construct(
-        ResponseFactoryInterface $responseFactory,
-        DebugInfoStrategy $debugInfoStrategy,
-        StatusCodeExtractionStrategy $statusCodeExtractor
+        private ResponseFactoryInterface $responseFactory,
+        private DebugInfoStrategy $debugInfoStrategy,
+        private StatusCodeExtractionStrategy $statusCodeExtractor,
     ) {
-        $this->responseFactory     = $responseFactory;
-        $this->debugInfoStrategy   = $debugInfoStrategy;
-        $this->statusCodeExtractor = $statusCodeExtractor;
     }
 
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
@@ -49,7 +42,7 @@ final class ErrorConversionMiddleware implements MiddlewareInterface
             return new UnformattedResponse(
                 $response,
                 $this->extractData($error, $response),
-                ['error' => $error]
+                ['error' => $error],
             );
         }
     }
@@ -66,7 +59,7 @@ final class ErrorConversionMiddleware implements MiddlewareInterface
 
         return $response->withAddedHeader(
             'Content-Type',
-            self::CONTENT_TYPE_CONVERSION[$accept] . '; charset=' . $request->getHeaderLine('Accept-Charset')
+            self::CONTENT_TYPE_CONVERSION[$accept] . '; charset=' . $request->getHeaderLine('Accept-Charset'),
         );
     }
 

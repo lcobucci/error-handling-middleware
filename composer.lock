@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "28208f39b4615225552683d4a0e77b5e",
+    "content-hash": "e1504a147c672c61b0c239953eaa2a3e",
     "packages": [
         {
             "name": "fig/http-message-util",
@@ -64,40 +64,40 @@
         },
         {
             "name": "lcobucci/content-negotiation-middleware",
-            "version": "3.0.0",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lcobucci/content-negotiation-middleware.git",
-                "reference": "66c6d8e5403ca935ffae49b7a6e17101e1cc81b5"
+                "reference": "5aa1d625d7b99addc58d20437e93902280d2f3d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lcobucci/content-negotiation-middleware/zipball/66c6d8e5403ca935ffae49b7a6e17101e1cc81b5",
-                "reference": "66c6d8e5403ca935ffae49b7a6e17101e1cc81b5",
+                "url": "https://api.github.com/repos/lcobucci/content-negotiation-middleware/zipball/5aa1d625d7b99addc58d20437e93902280d2f3d4",
+                "reference": "5aa1d625d7b99addc58d20437e93902280d2f3d4",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "fig/http-message-util": "^1.1",
-                "php": "^7.4 || ^8.0",
+                "php": "^8.0",
                 "psr/http-factory": "^1.0",
+                "psr/http-message": "^1.0",
                 "psr/http-server-middleware": "^1.0"
             },
             "require-dev": {
-                "infection/infection": "^0.16",
-                "jms/serializer": "^3.8",
-                "laminas/laminas-diactoros": "^2.3",
-                "lcobucci/coding-standard": "^5.0",
-                "league/plates": "^3.3",
+                "infection/infection": "^0.25",
+                "jms/serializer": "^3.15",
+                "laminas/laminas-diactoros": "^2.8",
+                "lcobucci/coding-standard": "^8.0",
+                "league/plates": "^3.4",
                 "middlewares/negotiation": "^2.0",
-                "phpstan/extension-installer": "^1.0",
+                "phpstan/extension-installer": "^1.1",
                 "phpstan/phpstan": "^0.12",
                 "phpstan/phpstan-deprecation-rules": "^0.12",
                 "phpstan/phpstan-phpunit": "^0.12",
                 "phpstan/phpstan-strict-rules": "^0.12",
-                "phpunit/phpunit": "^9.2",
-                "squizlabs/php_codesniffer": "^3.5",
-                "twig/twig": "^3.0"
+                "phpunit/phpunit": "^9.5",
+                "twig/twig": "^3.3"
             },
             "suggest": {
                 "jms/serializer": "For content formatting using a more flexible serializer",
@@ -107,11 +107,6 @@
                 "twig/twig": "For content formatting using Twig as template engine"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Lcobucci\\ContentNegotiation\\": "src"
@@ -130,7 +125,7 @@
             "description": "A PSR-15 middleware to handle content negotiation",
             "support": {
                 "issues": "https://github.com/lcobucci/content-negotiation-middleware/issues",
-                "source": "https://github.com/lcobucci/content-negotiation-middleware/tree/3.0.0"
+                "source": "https://github.com/lcobucci/content-negotiation-middleware/tree/3.1.0"
             },
             "funding": [
                 {
@@ -142,7 +137,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2020-07-02T17:28:07+00:00"
+            "time": "2021-10-31T22:08:18+00:00"
         },
         {
             "name": "psr/http-factory",
@@ -1140,16 +1135,16 @@
         },
         {
             "name": "lcobucci/coding-standard",
-            "version": "7.0.0",
+            "version": "8.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lcobucci/coding-standard.git",
-                "reference": "4324eea0af6e43b7a1944f3e8cdaff44eb62d49e"
+                "reference": "060bf65affbde2a4da148fb10c20ea1d2e3a2ecd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lcobucci/coding-standard/zipball/4324eea0af6e43b7a1944f3e8cdaff44eb62d49e",
-                "reference": "4324eea0af6e43b7a1944f3e8cdaff44eb62d49e",
+                "url": "https://api.github.com/repos/lcobucci/coding-standard/zipball/060bf65affbde2a4da148fb10c20ea1d2e3a2ecd",
+                "reference": "060bf65affbde2a4da148fb10c20ea1d2e3a2ecd",
                 "shasum": ""
             },
             "require": {
@@ -1173,7 +1168,7 @@
             "description": "Lcobucci's Coding Standard",
             "support": {
                 "issues": "https://github.com/lcobucci/coding-standard/issues",
-                "source": "https://github.com/lcobucci/coding-standard/tree/7.0.0"
+                "source": "https://github.com/lcobucci/coding-standard/tree/8.0.0"
             },
             "funding": [
                 {
@@ -1185,7 +1180,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2021-04-13T21:13:14+00:00"
+            "time": "2021-10-11T21:46:38+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -2026,23 +2021,23 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "9.2.7",
+            "version": "9.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "d4c798ed8d51506800b441f7a13ecb0f76f12218"
+                "reference": "cf04e88a2e3c56fc1a65488afd493325b4c1bc3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/d4c798ed8d51506800b441f7a13ecb0f76f12218",
-                "reference": "d4c798ed8d51506800b441f7a13ecb0f76f12218",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/cf04e88a2e3c56fc1a65488afd493325b4c1bc3e",
+                "reference": "cf04e88a2e3c56fc1a65488afd493325b4c1bc3e",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
                 "ext-libxml": "*",
                 "ext-xmlwriter": "*",
-                "nikic/php-parser": "^4.12.0",
+                "nikic/php-parser": "^4.13.0",
                 "php": ">=7.3",
                 "phpunit/php-file-iterator": "^3.0.3",
                 "phpunit/php-text-template": "^2.0.2",
@@ -2091,7 +2086,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.7"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.8"
             },
             "funding": [
                 {
@@ -2099,7 +2094,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-09-17T05:39:03+00:00"
+            "time": "2021-10-30T08:01:38+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",

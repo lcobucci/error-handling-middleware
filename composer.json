@@ -1,13 +1,13 @@
 {
     "name": "lcobucci/error-handling-middleware",
-    "type": "library",
     "description": "A PSR-15 middleware compatible with RFC 7807",
+    "license": "MIT",
+    "type": "library",
     "keywords": [
         "PSR-15",
         "RFC-7807",
         "error handling"
     ],
-    "license": "MIT",
     "authors": [
         {
             "name": "Luís Cobucci",
@@ -36,10 +36,6 @@
         "phpstan/phpstan-strict-rules": "^0.12",
         "phpunit/phpunit": "^9.5"
     },
-    "config": {
-        "preferred-install": "dist",
-        "sort-packages": true
-    },
     "autoload": {
         "psr-4": {
             "Lcobucci\\ErrorHandling\\": "src"
@@ -49,5 +45,9 @@
         "psr-4": {
             "Lcobucci\\ErrorHandling\\Tests\\": "tests"
         }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
     }
 }

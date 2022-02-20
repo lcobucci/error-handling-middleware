@@ -185,9 +185,12 @@ final class ErrorConversionMiddlewareTest extends TestCase
     public function processShouldAddDebugInfoData(): void
     {
         $response = $this->handleProcessWithError(new ServerRequest(), new RuntimeException(), new NoTrace());
-
         self::assertInstanceOf(UnformattedResponse::class, $response);
-        self::assertArrayHasKey('_debug', $response->getUnformattedContent());
+
+        $unformattedContent = $response->getUnformattedContent();
+
+        self::assertIsArray($unformattedContent);
+        self::assertArrayHasKey('_debug', $unformattedContent);
     }
 
     /**

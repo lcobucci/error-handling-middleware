@@ -8,6 +8,9 @@ use Lcobucci\ErrorHandling\Problem;
 use Lcobucci\ErrorHandling\StatusCodeExtractionStrategy;
 use Throwable;
 
+use function assert;
+use function is_int;
+
 final class ClassMap implements StatusCodeExtractionStrategy
 {
     private const DEFAULT_MAP = [
@@ -35,6 +38,7 @@ final class ClassMap implements StatusCodeExtractionStrategy
         }
 
         $code = $error->getCode();
+        assert(is_int($code));
 
         return $code !== 0 ? $code : StatusCodeInterface::STATUS_INTERNAL_SERVER_ERROR;
     }

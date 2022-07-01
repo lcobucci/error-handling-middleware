@@ -30,7 +30,7 @@
         "laminas/laminas-diactoros": "^2.11",
         "lcobucci/coding-standard": "^8.0",
         "phpstan/extension-installer": "^1.1",
-        "phpstan/phpstan": "^1.7",
+        "phpstan/phpstan": "^1.8",
         "phpstan/phpstan-deprecation-rules": "^1.0",
         "phpstan/phpstan-phpunit": "^1.1",
         "phpstan/phpstan-strict-rules": "^1.3",
